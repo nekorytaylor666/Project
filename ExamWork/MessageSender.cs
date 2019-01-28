@@ -15,13 +15,12 @@ namespace ExamWork
         const string _numFrom = "+19596666446"; // номер данный твилио по умолчанию, больше никакой не работает
 
         public void SendMessage(string numTo, string content)
-        {
+        {  
                 TwilioClient.Init(_accountSid, _authToken);
 
                 var message = MessageResource.Create(
                     from: new Twilio.Types.PhoneNumber(_numFrom),
                     body: content,
-                    statusCallback: new Uri("http://postb.in/r4jrqx2e"),
                     to: new Twilio.Types.PhoneNumber(numTo)
                 );
 
