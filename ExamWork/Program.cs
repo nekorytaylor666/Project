@@ -10,6 +10,10 @@ namespace ExamWork
     {
         static void Main(string[] args)
         {
+
+
+            ISmsSender smsSender = new MessageSender();
+            smsSender.SendMessage("+77783973990", "Hello world!");
         }
     }
 }
